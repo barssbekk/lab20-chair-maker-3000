@@ -11,11 +11,11 @@ private:
 public:
     // constructors
     Chair() {
-        const int MIN_LEGS = 1;
-        const int MAX_LEGS = 2;
+        const int MIN_LEGS = 3;
+        const int MAX_LEGS = 4;
         int rndLegs = (rand() % (MAX_LEGS - MIN_LEGS + 1) + MIN_LEGS);
         prices = new double[SIZE];
-        legs = 0;
+        legs = rndLegs;
         for (int i = 0; i < SIZE; i++)
             prices[i] = 0;
     }
