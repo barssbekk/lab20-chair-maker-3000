@@ -24,11 +24,11 @@ public:
             prices[i] = (rand() % (MAX_PRICES - MIN_PRICES + 1) + MIN_PRICES) / 100.0;
     }
 
-    Chair(int l) {
+    Chair(int l, double pricesInput[]) {
         prices = new double[SIZE];
         legs = l;
         for (int i = 0; i < SIZE; i++)
-            prices[i] = 0;
+            prices[i] = pricesInput[i];
     }
     // setters and getters
     void setLegs(int l) { legs = l; }
