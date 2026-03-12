@@ -10,10 +10,12 @@ private:
 public:
     Chair() : m_legs{0}, m_prices{} {};
     // Setter
-    void setLegs(int userLegs) { m_legs = userLegs; }
+    void setLegs(const int userLegs) { m_legs = userLegs; }
+    void setPrices(const vector<double>& userPrices) { m_prices = userPrices; }
 
     // Getter
-    int getLegs() {}
+    int getLegs() { return m_legs; }
+    vector<double> getPrices() { return m_prices; }
 };
 
 
