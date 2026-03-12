@@ -76,6 +76,9 @@ int main() {
 
     delete[] collection; // frees memory
     collection = nullptr;
+    delete chairPtr;
+    chairPtr = nullptr;
+
     return 0;
 }
 
