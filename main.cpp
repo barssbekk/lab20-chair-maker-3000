@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <ctime>
 
 using namespace std;
 const int SIZE = 3;
@@ -13,6 +14,9 @@ public:
     Chair() {
         const int MIN_LEGS = 3;
         const int MAX_LEGS = 4;
+
+        const int MIN_PRICES = 100;
+        const int MAX_PRICES = 999;
         int rndLegs = (rand() % (MAX_LEGS - MIN_LEGS + 1) + MIN_LEGS);
         prices = new double[SIZE];
         legs = rndLegs;
@@ -49,6 +53,7 @@ public:
 };
 
 int main() {
+    srand(time(0));
     cout << fixed << setprecision(2);
     //creating pointer to first chair object
     Chair *chairPtr = new Chair;
