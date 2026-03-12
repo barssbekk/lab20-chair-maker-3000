@@ -11,6 +11,9 @@ private:
 public:
     // constructors
     Chair() {
+        const int MIN_LEGS = 1;
+        const int MAX_LEGS = 2;
+        int rndLegs = (rand() % (MAX_LEGS - MIN_LEGS + 1) + MIN_LEGS);
         prices = new double[SIZE];
         legs = 0;
         for (int i = 0; i < SIZE; i++)
