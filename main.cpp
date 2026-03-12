@@ -15,13 +15,13 @@ public:
         const int MIN_LEGS = 3;
         const int MAX_LEGS = 4;
 
-        const int MIN_PRICES = 100;
-        const int MAX_PRICES = 999;
+        const int MIN_PRICES = 10000;
+        const int MAX_PRICES = 99999;
         int rndLegs = (rand() % (MAX_LEGS - MIN_LEGS + 1) + MIN_LEGS);
         prices = new double[SIZE];
         legs = rndLegs;
         for (int i = 0; i < SIZE; i++)
-            prices[i] = 0;
+            prices[i] = (rand() % (MAX_PRICES - MIN_PRICES + 1) + MIN_PRICES) / 100.0;
     }
 
     Chair(int l) {
