@@ -1,3 +1,4 @@
+// COMSC-210 | Lab 20 | Barsbek
 #include <iostream>
 #include <iomanip>
 #include <ctime>
@@ -47,8 +48,8 @@ public:
         cout << "CHAIR DATA - legs: " << legs << endl;
         cout << "Price history: " ;
         for (int i = 0; i < SIZE; i++)
-            cout << prices[i] << " ";
-        cout << endl << "Historical avg price: " << getAveragePrices();
+            cout << '$' << prices[i] << " ";
+        cout << endl << "Historical avg price: $" << getAveragePrices();
         cout << endl << endl;
     }
 };
